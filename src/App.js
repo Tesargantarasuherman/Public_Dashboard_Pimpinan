@@ -9,6 +9,7 @@ import {
   Routes
 } from "react-router-dom";
 import Covid19 from './pages/Covid19';
+import Vaccine from './pages/Vaccine';
 function App() {
 
   return (
@@ -17,6 +18,7 @@ function App() {
       <Topbar />
         <Routes>
           <Route path="/covid" element={<Covid19/>} />
+          <Route path="/vaksin" element={<Vaccine/>} />
         </Routes>
       </Router>
     </>

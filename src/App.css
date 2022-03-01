@@ -12,6 +12,97 @@ ion-icon {
   background-color: #084a83 !important;
   color:white;
 }
+/* vaksin */
+.tanggal-vaksin{
+  position: absolute !important;
+  margin: -10px 0px;
+  padding:5px;
+  top: -10px ;
+  left: 38%;
+}
+.shape-rounded{
+  border-radius: 10px;
+}
+.font-medium{
+  font-size: 12pt;
+ }
+ .bg-1{
+   background-color: #CD4029 !important;
+ }
+ .bg-2{
+   background-color: #E64E56 !important;
+ }
+ .bg-3{
+   background-color: #357854 !important;
+ }
+ .bg-4{
+   background-color: #884391 !important;
+ }
+ .bg-5{
+   background-color: #033896 !important;
+ }
+ .bg-6{
+   background-color: #66330E !important;
+ }
+ .bg-7{
+   background-color: #EF6231 !important;
+ }
+ .color-1{
+   color: #CD4029 !important;
+ }
+ .color-2{
+   color: #E64E56 !important;
+ }
+ .color-3{
+   color: #357854 !important;
+ }
+ .color-4{
+   color: #884391 !important;
+ }
+ .color-5{
+   color: #033896 !important;
+ }
+ .color-6{
+   color: #66330E !important;
+ }
+ .color-7{
+   color: #EF6231 !important;
+ }
+.font-big{
+  font-size: 28pt;
+ }
+.body-nomor-sasaran{
+  position: relative;
+}
+.card-little{
+  height: 100px !important;
+}
+.text-sasaran{
+ font-size: 12pt;
+}
+.font-update{
+  font-size: 12pt;
+}
+.nilai-sasaran{
+ font-size: 24pt;
+}
+.marginx-auto{
+  margin: auto 10px;
+}
+.border-card{
+  border-top: 2px solid white;
+}
+.nomor-sasaran{
+  z-index: 999;
+  position: absolute;
+  padding: 10px 15px;
+  top: 18% ;
+  left: 5px;
+  background-color: #ffffff !important;
+  border-radius: 50%;
+  font-weight: bold;
+}
+/* endvaksin */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

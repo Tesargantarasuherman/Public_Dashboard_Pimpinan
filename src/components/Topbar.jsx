@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 function Topbar() {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-default mb-4">
-            <a className="navbar-brand text-light" href="#">Navbar</a>
+            <a className="navbar-brand text-light" href="#">Dashboard Pimpinan</a>
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
             </button>
@@ -23,6 +23,7 @@ function Topbar() {
                         </a>
                         <div className="dropdown-menu bg-default" aria-labelledby="navbarDropdown">
                             <Link to='/covid' className='dropdown-item text-light'>Covid 19</Link>
+                            <Link to='/vaksin' className='dropdown-item text-light'>Vaksin</Link>
                         </div>
                     </li>
                 </ul>
