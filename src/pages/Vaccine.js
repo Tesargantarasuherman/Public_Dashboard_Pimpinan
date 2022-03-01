@@ -5,29 +5,21 @@ import IMG from '../img/medical.svg'
 import moment from "moment";
 
 function Vaccine() {
-    const [news, setNews] = useState([]);
     const [vaksin, setVaksin] = useState([]);
     const [vaksin1, setVaksin1] = useState([]);
     const [vaksin2, setVaksin2] = useState([]);
     const [vaksin3, setVaksin3] = useState([]);
-    const [covidIndo, setCovidIndo] = useState([]);
     useEffect(() => {
         getVaksin()
     }, [])
     const getVaksin = () => {
         axios.get(`http://data.bandung.go.id/service/index.php/vaksinasi/terkini`).then(res => {
-            console.log('res',res.data)
+            console.log('res', res.data)
             setVaksin(res.data)
             setVaksin1(res.data.data[0])
             setVaksin2(res.data.data[1])
             setVaksin3(res.data.data[2])
-            
-        })
-    }
-    const getCovidIndo = () => {
-        axios.get('https://data.covid19.go.id/public/api/update.json').then(res => {
-            console.log(res.data.update.total)
-            setCovidIndo(res.data.update.total)
+
         })
     }
     return (
@@ -39,10 +31,10 @@ function Vaccine() {
                             <div className="d-flex align-items-center">
                                 <div>
                                     <h1>
-                                        Pusat Informasi & Koordinasi Covid-19 Kota Bandung
+                                        Pusat Informasi & Koordinasi Vaksin Kota Bandung
                                     </h1>
                                     <p>
-                                        Media komunikasi dan informasi penanganan Covid-19 satu pintu di Kota Bandung. Hadirkan data dan visualisasi perkembangan kasus terkini Covid-19. Dilengkapi ragam layanan kesehatan digital pendukung kedaruratan pandemi.
+                                        Media komunikasi dan informasi penanganan Vaksin satu pintu di Kota Bandung. Hadirkan data dan visualisasi perkembangan kasus terkini Covid-19. Dilengkapi ragam layanan kesehatan digital pendukung kedaruratan pandemi.
                                     </p>
                                     <button type="button" class="btn btn-info">Selengkpanya</button>
                                 </div>
@@ -55,8 +47,8 @@ function Vaccine() {
                 </div>
 
             </div>
-            <div style={{ backgroundColor: '#f1f2f6'}} className="py-2">
-                <div className="container bg-default"  style={{borderRadius:10 }}>
+            <div style={{ backgroundColor: '#f1f2f6' }} className="py-2">
+                <div className="container bg-default" style={{ borderRadius: 10 }}>
                     <div className="row  px-2 mt-4 py-2 border border-light shape-rounded">
                         <div className="mt-2 mb-4 d-flex justify-content-center">
                             <h2 className="font-weight-bold text-light font-medium">
@@ -168,13 +160,19 @@ function Vaccine() {
                                         <div className="card bg-3">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 1</h6>
-                                                <p className="card-text font-weight-bold">{vaksin3.petugas_publik}</p>
+                                                <p className="card-text font-weight-bold">{vaksin1.vaksin_petugas_publik}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-3">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 2</h6>
-                                                <p className="card-text font-weight-bold">{null}</p>
+                                                <p className="card-text font-weight-bold">{vaksin2.vaksin_petugas_publik}</p>
+                                            </div>
+                                        </div>
+                                        <div className="card bg-3">
+                                            <div className="card-body text-center">
+                                                <h6 className="card-title font-weight-bold">Vaksin 3</h6>
+                                                <p className="card-text font-weight-bold">{vaksin3.vaksin_petugas_publik}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -233,7 +231,7 @@ function Vaccine() {
                                         <div className="col-md-12 ">
                                             <div class="border-card d-flex justify-content-between">
                                                 <div className="text-sasaran align-self-center mt-2 mr-2">Sasaran </div>
-                                                <div className="nilai-sasaran align-self-center">{null}</div>
+                                                <div className="nilai-sasaran align-self-center">{vaksin.sasaran_masyarakat}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -244,17 +242,19 @@ function Vaccine() {
                                         <div className="card bg-5">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 1</h6>
-                                                <p className="card-text font-weight-bold">{null}</p>
-                                                <hr className="border-card" />
-                                                <h4 className="card-text">{Math.ceil(null * 100)}%</h4>
+                                                <p className="card-text font-weight-bold">{vaksin1.vaksin_masyarakat}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-5">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 2</h6>
-                                                <p className="card-text font-weight-bold">{null}</p>
-                                                <hr className="border-card" />
-                                                <h4 className="card-text">{Math.ceil(null * 100)}%</h4>
+                                                <p className="card-text font-weight-bold">{vaksin2.vaksin_masyarakat}</p>
+                                            </div>
+                                        </div>
+                                        <div className="card bg-5">
+                                            <div className="card-body text-center">
+                                                <h6 className="card-title font-weight-bold">Vaksin 3</h6>
+                                                <p className="card-text font-weight-bold">{vaksin3.vaksin_masyarakat}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -272,7 +272,7 @@ function Vaccine() {
                                         <div className="col-md-12 ">
                                             <div class="border-card d-flex justify-content-between">
                                                 <div className="text-sasaran align-self-center mt-2 mr-2">Sasaran </div>
-                                                <div className="nilai-sasaran align-self-center">{null}</div>
+                                                <div className="nilai-sasaran align-self-center">{vaksin.sasaran_remaja}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -283,13 +283,19 @@ function Vaccine() {
                                         <div className="card bg-6">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 1</h6>
-                                                <p className="card-text font-weight-bold">{null}</p>
+                                                <p className="card-text font-weight-bold">{vaksin1.vaksin_remaja}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-6">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 2</h6>
-                                                <p className="card-text font-weight-bold">{null}</p>
+                                                <p className="card-text font-weight-bold">{vaksin2.vaksin_remaja}</p>
+                                            </div>
+                                        </div>
+                                        <div className="card bg-6">
+                                            <div className="card-body text-center">
+                                                <h6 className="card-title font-weight-bold">Vaksin 3</h6>
+                                                <p className="card-text font-weight-bold">{vaksin3.vaksin_remaja}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -299,7 +305,7 @@ function Vaccine() {
                         </div>
                         <div className="py-2 d-flex justify-content-between w-100">
                             <div>
-                                <h6 className="card-title font-weight-bold font-mobile-sm">Sumber Data: Dinas Kesehatan Kota Bandung</h6>
+                                <h6 className="card-title font-weight-bold font-mobile-sm">Sumber Data: {vaksin.Sumber}</h6>
                             </div>
                         </div>
                     </div>

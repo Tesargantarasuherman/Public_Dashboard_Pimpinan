@@ -14,9 +14,6 @@ function Topbar() {
                     <li className="nav-item active">
                         <a className="nav-link text-light" href="#">Beranda <span className="sr-only">(current)</span></a>
                     </li>
-                    <li className="nav-item">
-                        <Link to='/covid' className='nav-link text-light'>Covid 19</Link>
-                    </li>
                     <li className="nav-item dropdown">
                         <a className="nav-link dropdown-toggle text-light" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Data dan Statistik
