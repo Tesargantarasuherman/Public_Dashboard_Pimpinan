@@ -21,13 +21,11 @@ function Covid19() {
                 Authorization: 'RkplDPdGFxTSjARZkZUYi3FgRdakJy',
             }
         }).then(res => {
-            console.log(res.data.data)
             setCovid(res.data.data)
         })
     }
     const getCovidIndo = () => {
         axios.get('https://data.covid19.go.id/public/api/update.json').then(res => {
-            console.log(res.data.update.total)
             setCovidIndo(res.data.update.total)
         })
     }
@@ -45,7 +43,7 @@ function Covid19() {
                                     <p>
                                         Media komunikasi dan informasi penanganan Covid-19 satu pintu di Kota Bandung. Hadirkan data dan visualisasi perkembangan kasus terkini Covid-19. Dilengkapi ragam layanan kesehatan digital pendukung kedaruratan pandemi.
                                     </p>
-                                    <button type="button" class="btn btn-info">Selengkpanya</button>
+                                    <button type="button" class="btn bg-default text-light">Selengkpanya</button>
                                 </div>
                             </div>
                         </div>

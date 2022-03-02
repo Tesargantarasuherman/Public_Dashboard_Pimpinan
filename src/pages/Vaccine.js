@@ -14,7 +14,6 @@ function Vaccine() {
     }, [])
     const getVaksin = () => {
         axios.get(`http://data.bandung.go.id/service/index.php/vaksinasi/terkini`).then(res => {
-            console.log('res', res.data)
             setVaksin(res.data)
             setVaksin1(res.data.data[0])
             setVaksin2(res.data.data[1])
@@ -34,9 +33,9 @@ function Vaccine() {
                                         Pusat Informasi & Koordinasi Vaksin Kota Bandung
                                     </h1>
                                     <p>
-                                        Media komunikasi dan informasi penanganan Vaksin satu pintu di Kota Bandung. Hadirkan data dan visualisasi perkembangan kasus terkini Covid-19. Dilengkapi ragam layanan kesehatan digital pendukung kedaruratan pandemi.
+                                        Media komunikasi dan informasi penanganan Vaksin satu pintu di Kota Bandung. Hadirkan data dan visualisasi perkembangan kasus terkini Vaksin Covid-19. Dilengkapi ragam layanan kesehatan digital pendukung kedaruratan pandemi.
                                     </p>
-                                    <button type="button" class="btn btn-info">Selengkpanya</button>
+                                    <button type="button" class="btn bg-default text-light">Selengkpanya</button>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +108,7 @@ function Vaccine() {
                                         <div className="col-md-12 ">
                                             <div class="border-card d-flex justify-content-between">
                                                 <div className="text-sasaran align-self-center mt-2 mr-2">Sasaran </div>
-                                                <div className="nilai-sasaran align-self-center">{vaksin.sasaran_nakes}</div>
+                                                <div className="nilai-total-vaksin font-weight-bold nilai-sasaran">{parseInt(vaksin.sasaran_nakes).toLocaleString()}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -120,19 +119,19 @@ function Vaccine() {
                                         <div className="card bg-2">
                                             <div className="card-body text-center">
                                                 <h6 className="total-vaksin font-weight-bold">Vaksin 1</h6>
-                                                <div className="nilai-total-vaksin font-weight-bold nilai-sasaran">{vaksin1.vaksin_nakes}</div>
+                                                <div className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin1.vaksin_nakes).toLocaleString()}</div>
                                             </div>
                                         </div>
                                         <div className="card bg-2">
                                             <div className="card-body text-center">
                                                 <h6 className="total-vaksin font-weight-bold">Vaksin 2</h6>
-                                                <div className="nilai-total-vaksin font-weight-bold nilai-sasaran">{vaksin2.vaksin_nakes}</div>
+                                                <div className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin2.vaksin_nakes).toLocaleString()}</div>
                                             </div>
                                         </div>
                                         <div className="card bg-2">
                                             <div className="card-body text-center">
                                                 <h6 className="total-vaksin font-weight-bold">Vaksin 3</h6>
-                                                <div className="nilai-total-vaksin font-weight-bold nilai-sasaran">{vaksin3.vaksin_nakes}</div>
+                                                <div className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin3.vaksin_nakes).toLocaleString()}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -149,7 +148,7 @@ function Vaccine() {
                                         <div className="col-md-12 ">
                                             <div class="border-card d-flex justify-content-between">
                                                 <div className="text-sasaran align-self-center mt-2 mr-2">Sasaran </div>
-                                                <div className="nilai-sasaran align-self-center">{vaksin.sasaran_petugas_publik}</div>
+                                                <div className="nilai-total-vaksin font-weight-bold nilai-sasaran">{parseInt(vaksin.sasaran_petugas_publik).toLocaleString()}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -160,19 +159,19 @@ function Vaccine() {
                                         <div className="card bg-3">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 1</h6>
-                                                <p className="card-text font-weight-bold">{vaksin1.vaksin_petugas_publik}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin1?.vaksin_petugas_publik).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-3">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 2</h6>
-                                                <p className="card-text font-weight-bold">{vaksin2.vaksin_petugas_publik}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin2?.vaksin_petugas_publik).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-3">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 3</h6>
-                                                <p className="card-text font-weight-bold">{vaksin3.vaksin_petugas_publik}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin3?.vaksin_petugas_publik).toLocaleString()}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -190,7 +189,7 @@ function Vaccine() {
                                         <div className="col-md-12 ">
                                             <div class="border-card d-flex justify-content-between">
                                                 <div className="text-sasaran align-self-center mt-2 mr-2">Sasaran </div>
-                                                <div className="nilai-sasaran align-self-center">{vaksin.sasaran_lansia}</div>
+                                                <div className="nilai-total-vaksin font-weight-bold nilai-sasaran">{parseInt(vaksin.sasaran_lansia).toLocaleString()}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -201,19 +200,19 @@ function Vaccine() {
                                         <div className="card bg-4">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 1</h6>
-                                                <p className="card-text font-weight-bold">{vaksin1.vaksin_lansia}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin1.vaksin_lansia).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-4">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 2</h6>
-                                                <p className="card-text font-weight-bold">{vaksin2.vaksin_lansia}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin2.vaksin_lansia).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-4">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 3</h6>
-                                                <p className="card-text font-weight-bold">{vaksin3.vaksin_lansia}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin3.vaksin_lansia).toLocaleString()}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -226,12 +225,12 @@ function Vaccine() {
                                     <div className="row">
                                         <div className="col-md-12">
                                             <h6 className="nomor-sasaran color-5 bg-5">4</h6>
-                                            <h6 className="text-center font-weight-bold font-mobile-sm"> Masy. Rentan & Umum</h6>
+                                            <h6 className="text-center font-weight-bold font-mobile-sm ml-4"> Masy. Rentan & Umum</h6>
                                         </div>
                                         <div className="col-md-12 ">
                                             <div class="border-card d-flex justify-content-between">
                                                 <div className="text-sasaran align-self-center mt-2 mr-2">Sasaran </div>
-                                                <div className="nilai-sasaran align-self-center">{vaksin.sasaran_masyarakat}</div>
+                                                <div className="nilai-total-vaksin font-weight-bold nilai-sasaran">{parseInt(vaksin.sasaran_masyarakat).toLocaleString()}</div>
                                             </div>
                                         </div>
                                     </div>
@@ -242,19 +241,19 @@ function Vaccine() {
                                         <div className="card bg-5">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 1</h6>
-                                                <p className="card-text font-weight-bold">{vaksin1.vaksin_masyarakat}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin1.vaksin_masyarakat).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-5">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 2</h6>
-                                                <p className="card-text font-weight-bold">{vaksin2.vaksin_masyarakat}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin2.vaksin_masyarakat).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-5">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 3</h6>
-                                                <p className="card-text font-weight-bold">{vaksin3.vaksin_masyarakat}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin3.vaksin_masyarakat).toLocaleString()}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -272,30 +271,29 @@ function Vaccine() {
                                         <div className="col-md-12 ">
                                             <div class="border-card d-flex justify-content-between">
                                                 <div className="text-sasaran align-self-center mt-2 mr-2">Sasaran </div>
-                                                <div className="nilai-sasaran align-self-center">{vaksin.sasaran_remaja}</div>
+                                                <div className="nilai-total-vaksin font-weight-bold nilai-sasaran">{parseInt(vaksin.sasaran_remaja).toLocaleString()}</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="w-75 width-mobile-50 px-2">
                                     <div class="card-deck">
-
                                         <div className="card bg-6">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 1</h6>
-                                                <p className="card-text font-weight-bold">{vaksin1.vaksin_remaja}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin1.vaksin_remaja).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-6">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 2</h6>
-                                                <p className="card-text font-weight-bold">{vaksin2.vaksin_remaja}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin2.vaksin_remaja).toLocaleString()}</p>
                                             </div>
                                         </div>
                                         <div className="card bg-6">
                                             <div className="card-body text-center">
                                                 <h6 className="card-title font-weight-bold">Vaksin 3</h6>
-                                                <p className="card-text font-weight-bold">{vaksin3.vaksin_remaja}</p>
+                                                <p className="text-nilai-vaksin font-weight-bold">{parseInt(vaksin3.vaksin_remaja).toLocaleString()}</p>
                                             </div>
                                         </div>
                                     </div>

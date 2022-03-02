@@ -1,13 +1,14 @@
 import React from 'react'
+import moment from "moment";
 
-function Card() {
+function Card({ news }) {
     return (
         <div className="card">
-            <img className="card-img-top" src="https://img.bandung.go.id/images/news/2022/02/25/galeri/164577375473.jpg" alt="Card image cap" />
+            <img className="card-img-top" src={news.authorImage} alt="Card image cap" height={160} />
             <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
+                <span class="badge badge-pill bg-default text-light my-2">Kompas TV</span>
+                <h6 className="card-title">{news.title.substr(0, 35)}</h6>
+                <p className="card-text">{moment(news.date).format("LL")}</p>
             </div>
         </div>
     )

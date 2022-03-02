@@ -1,3 +1,13 @@
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
 .App {
   text-align: center;
 }
@@ -10,130 +20,186 @@ ion-icon {
 }
 .bg-default {
   background-color: #084a83 !important;
-  color:white;
+  color: white;
 }
 /* vaksin */
-.tanggal-vaksin{
+.tanggal-vaksin {
   position: absolute !important;
   margin: -10px 0px;
-  padding:5px;
-  top: -10px ;
+  padding: 5px;
+  top: -10px;
   left: 38%;
 }
-.shape-rounded{
+.shape-rounded {
   border-radius: 10px;
 }
-.font-medium{
+.font-medium {
   font-size: 12pt;
- }
- .bg-1{
-   background-color: #CD4029 !important;
- }
- .bg-2{
-   background-color: #E64E56 !important;
- }
- .bg-3{
-   background-color: #357854 !important;
- }
- .bg-4{
-   background-color: #884391 !important;
- }
- .bg-5{
-   background-color: #033896 !important;
- }
- .bg-6{
-   background-color: #66330E !important;
- }
- .bg-7{
-   background-color: #EF6231 !important;
- }
- .color-1{
-   color: #CD4029 !important;
- }
- .color-2{
-   color: #E64E56 !important;
- }
- .color-3{
-   color: #357854 !important;
- }
- .color-4{
-   color: #884391 !important;
- }
- .color-5{
-   color: #033896 !important;
- }
- .color-6{
-   color: #66330E !important;
- }
- .color-7{
-   color: #EF6231 !important;
- }
-.font-big{
+}
+.bg-1 {
+  background-color: #cd4029 !important;
+}
+.bg-2 {
+  background-color: #e64e56 !important;
+}
+.bg-3 {
+  background-color: #357854 !important;
+}
+.bg-4 {
+  background-color: #884391 !important;
+}
+.bg-5 {
+  background-color: #033896 !important;
+}
+.bg-6 {
+  background-color: #66330e !important;
+}
+.bg-7 {
+  background-color: #ef6231 !important;
+}
+.color-1 {
+  color: #cd4029 !important;
+}
+.color-2 {
+  color: #e64e56 !important;
+}
+.color-3 {
+  color: #357854 !important;
+}
+.color-4 {
+  color: #884391 !important;
+}
+.color-5 {
+  color: #033896 !important;
+}
+.color-6 {
+  color: #66330e !important;
+}
+.color-7 {
+  color: #ef6231 !important;
+}
+.font-big {
   font-size: 28pt;
- }
-.body-nomor-sasaran{
+}
+.body-nomor-sasaran {
   position: relative;
 }
-.card-little{
+.card-little {
   height: 100px !important;
 }
-.text-sasaran{
- font-size: 12pt;
-}
-.font-update{
+.text-sasaran {
   font-size: 12pt;
 }
-.nilai-sasaran{
- font-size: 24pt;
+.font-update {
+  font-size: 12pt;
 }
-.marginx-auto{
+.nilai-sasaran {
+  font-size: 24pt;
+}
+.marginx-auto {
   margin: auto 10px;
 }
-.border-card{
+.border-card {
   border-top: 2px solid white;
 }
-.nomor-sasaran{
+.nomor-sasaran {
   z-index: 999;
   position: absolute;
   padding: 10px 15px;
-  top: 18% ;
+  top: 18%;
   left: 5px;
   background-color: #ffffff !important;
   border-radius: 50%;
   font-weight: bold;
 }
+.text-nilai-vaksin {
+  font-size: 24px !important;
+  font-weight: bold;
+}
 /* endvaksin */
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.label-default {
-  font-size: 20px;
-  font-weight: 500;
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.footer{
+  height: 60px;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 .bg-secondary {
   background-color: #f1f2f6 !important;
 }
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 770px) {
+  .font-big {
+    font-size: 16pt;
   }
-  to {
-    transform: rotate(360deg);
+  .card-sasaran {
+    margin-bottom: 15px !important;
+  }
+  .font-medium {
+    font-size: 10px !important;
+  }
+  .font-update {
+    font-size: 14px !important;
+  }
+  .width-mobile-50 {
+    flex:1 !important;
+  }
+  .tanggal-vaksin {
+    left: 0px;
+    right: 0px;
+  }
+  .total-vaksin {
+    font-size: 8pt;
+  }
+  .text-sasaran {
+    font-size: 8pt;
+  }
+  .nilai-sasaran {
+    font-size: 12pt;
+    text-align: center;
+  }
+  .nomor-sasaran {
+    visibility: hidden;
+  }
+  .font-mobile-xs {
+    font-size: 10px !important;
+  }
+  .font-mobile-sm {
+    font-size: 12px !important;
+  }
+  .card-besar {
+    position: unset;
+  }
+  .visit {
+    display: none;
+  }
+  .peta {
+    margin-bottom: 20px !important;
+  }
+  .navbar-responsive {
+    display: flex;
+    margin-top: -18%;
+  }
+  .navbar-default {
+    visibility: hidden;
+  }
+  .bantuan-card {
+    margin-top: 80px;
+  }
+  h1 {
+    font-size: larger;
+  }
+  h2 {
+    font-size: medium;
+  }
+  h4 {
+    font-size: small;
+  }
+  .hasil-terkonfirmasi {
+    font-size: larger;
+    margin-left: 10px;
+  }
+  .penambahan {
+    font-size: large;
+    margin: 0px 10px;
+    margin-bottom: 15px;
   }
 }
