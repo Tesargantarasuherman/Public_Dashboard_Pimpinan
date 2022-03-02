@@ -4,13 +4,23 @@ import axios from 'axios';
 import IMG from '../../img/city.svg'
 import moment from "moment";
 import PeraturanPerundangan from './_components/PeraturanPerundangan';
+import DewanSmartCity from './_components/DewanSmartCity';
+import NilaiSmartCity from './_components/NilaiSmartCity';
 function SmartCity() {
-    const [active, setactive] = useState({ active: 'peraturan perundangan' });
+    const [active, setActive] = useState({ active: 'peraturan perundangan' });
     const renderSwitch = (active) => {
         switch (active) {
             case "peraturan perundangan":
                 return (
                     <PeraturanPerundangan />
+                );
+            case "dewan smart city":
+                return (
+                    <DewanSmartCity />
+                );
+            case "nilai smart city":
+                return (
+                    <NilaiSmartCity />
                 );
             default:
                 return (
@@ -38,14 +48,15 @@ function SmartCity() {
             </div>
             <div className="container my-4" style={{ minHeight: 400 }}>
                 <div className="d-flex justify-content-between my-4">
-                    <button type="button" class="btn bg-default text-light">Peraturan Perundangan</button>
-                    <button type="button" class="btn bg-default text-light">Dewan Smart City</button>
-                    <button type="button" class="btn bg-default text-light">Nilai Smart City / Tahun </button>
+                    <button type="button" class="btn bg-default actived text-light" onClick={() => setActive({ active: "peraturan perundangan" })}>Peraturan Perundangan</button>
+                    <button type="button" class="btn bg-default text-light" onClick={() => setActive({ active: "dewan smart city" })}>Dewan Smart City</button>
+                    <button type="button" class="btn bg-default text-light" onClick={() => setActive({ active: "nilai smart city" })}>Nilai Smart City / Tahun </button>
                     <button type="button" class="btn bg-default text-light">Dimensi Smart City</button>
                     <button type="button" class="btn bg-default text-light">Master Plan Smart City</button>
                 </div>
                 <div className="content">
                     {renderSwitch(active.active)}
+
                 </div>
 
             </div>

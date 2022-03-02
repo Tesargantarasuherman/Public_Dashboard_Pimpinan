@@ -14,6 +14,11 @@
 ion-icon {
   color: white !important;
 }
+.bg-default.actived{
+  color: #084a83 !important;
+  background-color: white !important;
+  border : 1px solid #084a83 !important;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -22,6 +27,7 @@ ion-icon {
   background-color: #084a83 !important;
   color: white;
 }
+
 /* vaksin */
 .tanggal-vaksin {
   position: absolute !important;
